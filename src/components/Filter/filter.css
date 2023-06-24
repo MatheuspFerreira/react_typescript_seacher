@@ -1,0 +1,32 @@
+.Filter__container {
+    width: 100%;
+    margin: 0px 15%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0px;
+    background: linear-gradient(45deg, #4D8FD5, #003366,  #4D8FD5,#003366);
+    backdrop-filter: blur(10px); /* Efeito de desfoque */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2), 0px 8px 24px rgba(0, 0, 0, 0.1);
+    -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    
+}
+
+.Filter__content {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.Filter__content .ant-select-selector {
+    height: 40px !important;
+
+}
+
+.Filter__content .ant-select-selection-item {
+    line-height: 40px !important;
+}

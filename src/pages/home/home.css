@@ -1,0 +1,78 @@
+.Home__container {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 0px;
+    padding-top: 140px;
+    background-color: white;
+    background-color: #ddedff;
+    
+}
+
+.Home__healpers {
+    width: 50%;
+    height: 380px;
+    margin-top: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+}
+
+.Home__content {
+    width: 80%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    position: relative;
+     
+}
+
+.Home__CardsContainer   {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 30px;
+
+}
+
+.Home__cardNotFound {
+    width: auto;
+    height: auto;
+    margin-top: 120px;
+
+}
+
+.Home__cardNotFound p{
+    font-size: 25px;
+
+}
+
+.Home__cardNotFound span{
+    font-size: 28px;
+    font-weight: bold;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
