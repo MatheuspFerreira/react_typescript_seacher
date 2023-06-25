@@ -1,54 +1,84 @@
 import { ICardProps } from "./interface/CardProps";
+import { handleFormattedGenre } from "../../healpers/utils/formattedGenre";
 import './card.css'
 
 
-
-export default function Card ({ title, thumbnail, developer, platform, genre }:ICardProps) {
+export default function Card ({ loading, error, games, filteredGames, filteredGenres, searcher  }:ICardProps) {
 
     return(
-        <div className="Card__container">
+        <div className={(loading || error) && games === 0 ? '--Disabled':"Card__container"}>
+
+                {
+                    games > 0 && filteredGames !== 0
+                        
+                    ?
+
+                    filteredGenres.map((current, index) => { 
+                        return(
+                            <div className="Card__content" key={index}>
                                    
-            <div className="Card__contentImg">
-                <h3>
-                    {title}
-                </h3>                                         
+                                <div className="Card__contentImg">
+                                    <h3>
+                                        {current.title}
+                                    </h3>                                         
 
-                <img 
-                    src={thumbnail} 
-                    alt={`Thumbnail - ${title}`} 
-                                            
-                />
-                                                       
-            </div>  
-                                
-            <div className="Card__descriptions">
-                <ul>
-                    <li>
-                        <p>
-                            Developer: {developer}
-                        </p>
+                                    <img 
+                                        src={current.thumbnail} 
+                                        alt={`Thumbnail - ${current.title}`} 
+                                                                
+                                    />
+                                                                        
+                                </div>  
+                                                    
+                                <div className="Card__descriptions">
+                                    <ul>
+                                        <li>
+                                            <p>
+                                                Desenvolvedor: {current.developer}
+                                            </p>
 
-                    </li>  
+                                        </li>  
 
-                    <li>
-                        <p>
-                            Plataform: {platform}
-                        </p>
+                                        <li>
+                                            <p>
+                                                Plataforma: {current.platform}
+                                            </p>
 
-                    </li>
+                                        </li>
 
-                    <li>
-                        <p>
-                            Genre: {genre}
-                        </p>
+                                        <li>
+                                            <p>
+                                                Gênero: {handleFormattedGenre(current.genre)}
+                                            </p>
 
-                    </li>
-                                                                                
-                </ul>
+                                        </li>
+                                                                                                    
+                                    </ul>
 
-            </div>
+                                </div>
 
-        </div>
+                            </div>
+                        )
+                           
+                    })
+
+                    :
+
+                    <div className="Card__notFound">
+                        {
+                            searcher 
+                            && 
+                            <p>
+                                Desculpe, não encontramos nenhum jogo com o nome de <br/>  
+                                <span>{searcher}</span>
+                            </p>
+                        }
+                    </div>
+
+                }
+
+        </div> 
+        
 
     );
 }

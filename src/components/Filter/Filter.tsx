@@ -1,67 +1,53 @@
-import { Input, Select, Tooltip } from "antd";
+import { IFilterProps } from "./interface/FilterProps";
+import Select from "../select/Select";
+import Input from "../input/Input";
 import './filter.css';
 
 
 
-interface IFilterProps {
-    searcher:string;
-    setSearcher: (value:string) => void;
-
-
-}
-
-
-export default function Filter ({searcher, setSearcher}:IFilterProps) {
+export default function Filter ({searcher, setSearcher, options, onChangeSelect, selectedValue}:IFilterProps) {
 
     const handleChange = (value: string) => {
-        console.log(`selected ${value}`);
-    };
+        if(value === 'Filtrar por Gênero'){
+            onChangeSelect('');
+            return;
+        };
 
-    const handleSeach = (value:string) =>{
-        console.log(value)
-    }
-      
+        onChangeSelect(value);
+        
+    };
+  
 
     return (
         <div className="Filter__container">
             <div className="Filter__content">
-                <Tooltip placement="left" title={'Select Genre to filter'}>
+                <Select
+                    placement={'bottom'}
+                    title={"Selecione para filtrar"}
+                    onChange={handleChange}
+                    selectedValue={selectedValue}
+                    options={options}
+                    placeholder={'Filtrar por Gênero'}
+                    name={"Genre"}
+                    className={"Filter__select"}
 
-                    <Select
-                        defaultValue="lucy"
-                        style={{ width: 120 }}
-                        onChange={handleChange}
-                        options={[
-                            { value: 'jack', label: 'Jack' },
-                            { value: 'lucy', label: 'Lucy' },
-                            { value: 'Yiminghe', label: 'yiminghe' },
-                            { value: 'disabled', label: 'Disabled', disabled: true },
-                        ]}
-                    />
+                />
 
-                </Tooltip>
-                <Tooltip placement="bottom" title={'Enter the title to search'}>
+                <Input
+                    placement={'bottom'}
+                    title={"Digite para buscar"}
+                    type={"text"}
+                    name={"searcher"}
+                    className={"Filter__seacher"}
+                    setSearcher={setSearcher}
+                    searcher={searcher}
+                    placeholder={"Digite para buscar..."}
 
-                    <Input 
-                        size="large" 
-                        placeholder="Type to search..." 
-                        prefix={''}
-                        onChange={
-                            event => setSearcher(event.target.value)
-                        }
-                        value={searcher}
-                       
-                         
-                    />
-
-                </Tooltip>
-
+                />
+                
             </div>
                   
-
-        </div>
-        
-
+        </div>   
     );
 
 }

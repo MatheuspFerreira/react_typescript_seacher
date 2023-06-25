@@ -1,4 +1,3 @@
-import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/home/Home';
 
@@ -12,14 +11,7 @@ function App() {
           <Home />
         } 
       />
-          
-      {/* <Route path="*" 
-            element={
-              <Navigate to='/404' />
-        
-            } 
-      /> */}
-      
+   
     </Routes>
   );
 }

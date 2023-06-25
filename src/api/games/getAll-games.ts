@@ -1,4 +1,4 @@
-async function getAllGames ():Promise<Response>{
+async function getAllGames (credential:string):Promise<Response>{
 
     try {   
         const response = await fetch(`https://games-test-api-81e9fb0d564a.herokuapp.com/api/data/`,{
@@ -6,7 +6,7 @@ async function getAllGames ():Promise<Response>{
             headers: {
                 'Content-Type': 'application/json',
                 Accept: 'application/json',
-                'dev-email-address':'matheus@gmail.com'
+                'dev-email-address':credential
                     
             }   
         })   
@@ -18,8 +18,7 @@ async function getAllGames ():Promise<Response>{
         
     };
 
-}
-
+};
 
 
 export default getAllGames ;

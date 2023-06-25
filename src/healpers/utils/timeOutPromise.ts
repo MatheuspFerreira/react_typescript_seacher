@@ -4,5 +4,5 @@ const timeOutPromise: Promise<boolean> = new Promise((resolve) => {
     }, 5000);
   });
   
-  export default timeOutPromise;
+export default timeOutPromise;
   
