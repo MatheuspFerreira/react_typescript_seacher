@@ -5,6 +5,7 @@ import './filter.css';
 
 
 
+
 export default function Filter ({searcher, setSearcher, options, onChangeSelect, selectedValue}:IFilterProps) {
 
     const handleChange = (value: string) => {

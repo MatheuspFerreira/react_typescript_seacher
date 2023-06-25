@@ -2,12 +2,13 @@ import { useEffect, useState } from "react";
 import { IGame } from "../../interfaces/Game";
 import { IError } from "../../interfaces/Error";
 import Card from "../../components/card/card";
-import Filter from "../../components/filter/Filter";
+
 import Results from "../../components/results/Results";
 import filterTitle from "../../healpers/game/filter-title";
 import filterGenre from "../../healpers/game/filter-genre";
 import getAllGamesData from "../../healpers/utils/getAllGames";
 import './home.css';
+import Filter from "../../components/Filter/Filter";
 
 
 
