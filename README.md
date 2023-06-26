@@ -22,8 +22,8 @@ A url base da API é [https://games-test-api-81e9fb0d564a.herokuapp.com/api/](ht
 
 ## Instruções para rodar o projeto
 
-1- No diretorio do projeto digite `yarn install` para instalar as dependências.</br>
-2- No diretorio do projeto digite `yarn start` para iniciar o projeto.</br>
+1- No diretório do projeto digite `yarn install` para instalar as dependências.</br>
+2- No diretório do projeto digite `yarn start` para iniciar o projeto.</br>
 3- Projeto está rodando por default na porta 3000
 </br>
 </br>
@@ -38,7 +38,7 @@ A url base da API é [https://games-test-api-81e9fb0d564a.herokuapp.com/api/](ht
 
 
 ## Link
-Você pode ver e interagir com o projeto no link: https://react-typescript-app-master.vercel.app/
+Você pode interagir com o projeto no link: https://react-typescript-app-master.vercel.app/
 
 
 
