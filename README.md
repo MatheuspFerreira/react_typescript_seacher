@@ -1,46 +1,44 @@
-# Getting Started with Create React App
+# Processo seletivo - Frontend App Master - React/TypeScript
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Requisitos funcionais
 
-## Available Scripts
+A url base da API é [https://games-test-api-81e9fb0d564a.herokuapp.com/api/](https://games-test-api-81e9fb0d564a.herokuapp.com/api/data/)
 
-In the project directory, you can run:
+- O projeto deve ser feito usando React ou Next.JS</br>
+- Obter a lista de jogos em `/data`</br>
+- Apresentar um loader enquanto os dados são obtidos</br>
+- Apresentar os jogos em três colunas (no computador)</br>
+- Em cada card apresentar o título e imagem pelo ao menos</br>
+- Lidar com a responsividade, para que fique bem apresentado no computador, tablets ou celular</br>
+- Quando a API retornar o `status code` 500, 502, 503, 504, 507, 508 ou 509 apresentar ao usuário `O servidor fahou em responder, tente recarregar a página`</br>
+- Caso a API retorne outros erros, apresentar `O servidor não conseguirá responder por agora, tente voltar novamente mais tarde`</br>
+- Ao realizar uma chamada, não esperar mais que 5 segundos pelo retorno. Se os dados demorarem mais de 5 segundos para retornar apresentar `O servidor demorou para responder, tente mais tarde`</br>
+- Sempre que apresentar uma mensagem para o usuário, ou tiver os dados em mãos para apresentar, ocultar o loader</br>
+- Incluir um campo de busca, que permite localizar jogos pelo título, com busca case insensitive</br>
+- Uma vez que tenha os dados em mãos, veja quais `genre` foram retornados e permita ao usuário selecionar um deles, e então filtre para exibir apenas jogos do gênero selecionado</br>
+</br>
+</br>
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Instruções para rodar o projeto
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1- No diretório do projeto digite `yarn install` para instalar as dependências.</br>
+2- No diretório do projeto digite `yarn start` para iniciar o projeto.</br>
+3- Projeto está rodando por default na porta 3000
+</br>
+</br>
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+## Print do projeto
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![image](https://github.com/MatheuspFerreira/react_typescript_seacher/assets/100325391/a7183b55-2cfe-46e2-89bf-ba71a50c3a45)
+</br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+## Link
+Você pode interagir com o projeto no link: https://react-typescript-app-master.vercel.app/
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
