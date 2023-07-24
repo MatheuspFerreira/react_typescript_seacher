@@ -1,4 +1,4 @@
-# Processo seletivo - Frontend App Master - React/TypeScript
+# Frontend - React/TypeScript
 
 ## Requisitos funcionais
 
